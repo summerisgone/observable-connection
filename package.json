@@ -4,11 +4,15 @@
   "description": "Tool for managing state via set of observable streams in rx",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "`npm bin`/eslint . && `npm bin`/mocha test/connection.spec.js"
   },
   "author": "Ivan Gromov <summer.is.gone@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "detect-node": "^2.0.3",
     "rxjs": "^5.0.0-beta.11"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0"
   }
 }
