@@ -23,7 +23,7 @@ module.exports = function subscribeScope(scope, onNext, onError, onComplete) {
         return function (data) {
             // (scope.$$phase || scope.$root.$$phase) ? callback(data) : scope.$apply(() => {
             scope.$applyAsync(() => {
-                callback.call(null, data);
+                callback(data);
             });
         };
     };

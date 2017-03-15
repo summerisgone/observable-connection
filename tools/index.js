@@ -1,7 +1,6 @@
 'use strict';
+const assert = require('./assert');
+const subscribeScope = require('./subscribe-scope');
+const catchPromise = require('./catch-promise');
 
-module.exports = {
-    assert: require('./assert'),
-    subscribeScope: require('./subscribe-scope'),
-    catchPromise: require('./catch-promise')
-};
+module.exports = {assert, subscribeScope, catchPromise};
