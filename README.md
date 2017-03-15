@@ -1,13 +1,9 @@
 # What is Observable connection?
 
-A simple tool with few benefits:
+It is a registry for observable strams. Features:
 
 - it manages dependent observables
-- it follows observable-as-plugin approach
 - pretend to be small
-- provides naive way to define data type in stream
-- provides API for user and server event streams as observables
-- plays with LTS nodejs syntax without transpile
 
 ## What it won't do
 
@@ -36,7 +32,7 @@ const plugin = function userSelection() {
   return new Rx.BehaviorSubject([]);
 }
 const connection = new MyConnection({
-  plugins: [plugin]
+  plugins: {plugin}
 });
 ```
 

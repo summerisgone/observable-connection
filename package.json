@@ -1,7 +1,7 @@
 {
   "name": "observable-connection",
-  "version": "0.0.1",
-  "description": "Tool for managing state via set of observable streams in rx",
+  "version": "0.1.0",
+  "description": "Observable streams registry",
   "main": "index.js",
   "scripts": {
     "test": "`npm bin`/eslint . && `npm bin`/mocha test/connection.spec.js"
@@ -10,9 +10,10 @@
   "license": "MIT",
   "dependencies": {
     "detect-node": "^2.0.3",
-    "rxjs": "^5.0.0-beta.11"
+    "rxjs": "^5.2.0"
   },
   "devDependencies": {
-    "eslint": "^3.4.0"
+    "eslint": "^3.4.0",
+    "mocha": "^3.2.0"
   }
 }
