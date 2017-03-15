@@ -4,7 +4,7 @@
   "description": "Observable streams registry",
   "main": "index.js",
   "scripts": {
-    "test": "`npm bin`/eslint . && `npm bin`/mocha test/connection.spec.js"
+    "test": "eslint . && istanbul cover --report lcov _mocha"
   },
   "author": "Ivan Gromov <summer.is.gone@gmail.com>",
   "license": "MIT",
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "eslint": "^3.4.0",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
   }
 }
