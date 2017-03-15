@@ -24,12 +24,23 @@ describe('Connection', () => {
         );
     });
 
-    it('contructor works in happy case', () => {
+    it('constructor works in happy case', () => {
         function emptyPlugin() {
             return Rx.Observable.empty();
         }
         assert(new OC.Connection({
-            plugins: [emptyPlugin]
+            plugins: {emptyPlugin}
         }));
+    });
+
+    it('reports on plugin error', () => {
+        function plugin() {
+            throw new Error('foobar');
+        }
+        assert.throws(() => {
+            new OC.Connection({ plugins: {plugin} });
+        },
+        err => /foobar/.test(err),
+        'unexpected error thrown');
     });
 });

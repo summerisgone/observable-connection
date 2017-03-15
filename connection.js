@@ -35,7 +35,7 @@ class Connection {
         try {
             return pluginFn(this);
         } catch (err) {
-            assert(false, `Can't create plugin instance for ${pluginFn.name}, ${err.message}`);
+            assert(false, `Can't create plugin instance for '${pluginFn.name}', ${err.message}`);
             throw err;
         }
     }
